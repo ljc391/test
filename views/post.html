@@ -1,0 +1,16 @@
+
+{% extends "layout.html" %}
+{% block content %}
+       <form action="/posts" method="POST">
+          <label  >Title:</label>
+          <input name="title" type="text"  value=""/>
+          <label  >Content:</label>
+          <input name="content" type="text"  value=""/>
+
+          <input type="submit" value="Submit" />
+        </form>
+        {% for post in posts %}
+           <p>  title:<a href={{post.titleUrl}}>{{post.title}}</a> content:{{post.content}}</p>
+        {% endfor %}
+
+{% endblock %}

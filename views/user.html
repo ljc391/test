@@ -1,0 +1,10 @@
+
+{% extends "layout.html" %}
+{% block content %}
+  {{user.name}}
+  {{user.id}}
+  {% for post in posts %}
+    {{post.title}}
+    {{post.content}}
+  {% endfor %}
+{% endblock %}

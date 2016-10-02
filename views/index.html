@@ -1,0 +1,14 @@
+
+{% extends "layout.html" %}
+{% block content %}
+        <form action="/users" method="POST">
+          <label for="name_field">Name:</label>
+          <input name="name" type="text" id="name_field" value=""/>
+
+          <input type="submit" value="Submit" />
+        </form>
+{% for user in users %}
+    {{user.id}}
+    {{user.name}}
+{% endfor %}
+{% endblock %}
